@@ -1,121 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sidebar Navigation</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            scroll-behavior: smooth;
-            /* Enables smooth scrolling */
-        }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        scroll-behavior: smooth;
+        /* Enables smooth scrolling */
+      }
 
-        .container {
-            display: flex;
-        }
+      .container {
+        display: flex;
+      }
 
-        .sidebar {
-            width: 200px;
-            height: 100vh;
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
-            box-sizing: border-box;
-            position: fixed;
-            /* Keeps the sidebar fixed */
-        }
+      .sidebar {
+        width: 200px;
+        height: 100vh;
+        background-color: #2c3e50;
+        color: white;
+        padding: 20px;
+        box-sizing: border-box;
+        position: fixed;
+        /* Keeps the sidebar fixed */
+      }
 
-        .sidebar a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
+      .sidebar a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+      }
 
-        .sidebar a:hover {
-            background-color: #34495e;
-        }
+      .sidebar a:hover {
+        background-color: #34495e;
+      }
 
-        .content {
-            margin-left: 220px;
-            /* Leaves space for the fixed sidebar */
-            padding: 20px;
-            width: calc(100% - 220px);
-            box-sizing: border-box;
-        }
+      .content {
+        margin-left: 220px;
+        /* Leaves space for the fixed sidebar */
+        padding: 20px;
+        width: calc(100% - 220px);
+        box-sizing: border-box;
+      }
 
-        .content div {
-            margin: 50px 0;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+      .content div {
+        margin: 50px 0;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
 
-        pre {
-            background-color: #2d2d2d;
-            /* Dark background for block-level code */
-            color: #ffffff;
-            /* Light text color */
-            font-family: "Courier New", Courier, monospace;
-            /* Monospaced font */
-            font-size: 0.95em;
-            /* Slightly smaller font size */
-            padding: 10px 15px;
-            /* Spacing around code block */
-            border-radius: 6px;
-            /* Rounded corners */
-            overflow-x: auto;
-            /* Horizontal scrolling for long code */
-            white-space: pre-wrap;
-            /* Prevent horizontal scroll if content fits */
-        }
+      pre {
+        background-color: #2d2d2d;
+        /* Dark background for block-level code */
+        color: #ffffff;
+        /* Light text color */
+        font-family: "Courier New", Courier, monospace;
+        /* Monospaced font */
+        font-size: 0.95em;
+        /* Slightly smaller font size */
+        padding: 10px 15px;
+        /* Spacing around code block */
+        border-radius: 6px;
+        /* Rounded corners */
+        overflow-x: auto;
+        /* Horizontal scrolling for long code */
+        white-space: pre-wrap;
+        /* Prevent horizontal scroll if content fits */
+      }
 
-        code {
-            background: none;
-            /* Removes inline code background when inside pre */
-            color: inherit;
-            /* Use parent pre block's color */
-        }
+      code {
+        background: none;
+        /* Removes inline code background when inside pre */
+        color: inherit;
+        /* Use parent pre block's color */
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <h2>Navigation</h2>
-            <nav>
-                <a href="#section1">Design patterns</a>
-                <a href="#section2">Code execution</a>
-                <a href="#section3">BOM & DOM</a>
-            </nav>
-        </aside>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>Navigation</h2>
+        <nav>
+          <a href="#section1">Design patterns</a>
+          <a href="#section2">Code execution</a>
+          <a href="#section3">BOM & DOM</a>
+        </nav>
+      </aside>
 
-        <!-- Content Area -->
-        <main class="content">
-            <div id="section1">
-                <h2>JavaScript Design Patterns</h2>
-                <p>
-                    JavaScript design patterns are common solutions to recurring
-                    problems in software design. They provide best practices to
-                    structure and organize your code effectively. Here's a breakdown of
-                    the main categories of design patterns and examples of commonly used
-                    ones in JavaScript:
-                </p>
+      <!-- Content Area -->
+      <main class="content">
+        <div id="section1">
+          <h2>JavaScript Design Patterns</h2>
+          <p>
+            JavaScript design patterns are common solutions to recurring
+            problems in software design. They provide best practices to
+            structure and organize your code effectively. Here's a breakdown of
+            the main categories of design patterns and examples of commonly used
+            ones in JavaScript:
+          </p>
 
-                <h3>1. Creational Patterns</h3>
-                <p>
-                    These patterns deal with object creation and help make the process
-                    more flexible and reusable.
-                </p>
+          <h3>1. Creational Patterns</h3>
+          <p>
+            These patterns deal with object creation and help make the process
+            more flexible and reusable.
+          </p>
 
-                <h4>a. Singleton Pattern</h4>
-                <pre><code>
+          <h4>a. Singleton Pattern</h4>
+          <pre><code>
         const Singleton = (function () {
             let instance;
         
@@ -139,8 +138,8 @@
         console.log(instance1 === instance2); // Output: true
         </code></pre>
 
-                <h4>b. Factory Pattern</h4>
-                <pre><code>
+          <h4>b. Factory Pattern</h4>
+          <pre><code>
         function CarFactory(type) {
             switch (type) {
                 case "sedan":
@@ -157,14 +156,14 @@
         console.log(car1, car2);
         </code></pre>
 
-                <h3>2. Structural Patterns</h3>
-                <p>
-                    These patterns deal with object composition and simplify
-                    relationships between objects.
-                </p>
+          <h3>2. Structural Patterns</h3>
+          <p>
+            These patterns deal with object composition and simplify
+            relationships between objects.
+          </p>
 
-                <h4>a. Module Pattern</h4>
-                <pre><code>
+          <h4>a. Module Pattern</h4>
+          <pre><code>
         const Module = (function () {
             let privateVar = "I am private";
         
@@ -182,8 +181,8 @@
         Module.publicMethod(); // Output: I am private
         </code></pre>
 
-                <h4>b. Decorator Pattern</h4>
-                <pre><code>
+          <h4>b. Decorator Pattern</h4>
+          <pre><code>
         function Car() {
             this.cost = function () {
                 return 20000;
@@ -202,8 +201,8 @@
         console.log(myCar.cost()); // Output: 21500
         </code></pre>
 
-                <h4>c. Proxy Pattern</h4>
-                <pre><code>
+          <h4>c. Proxy Pattern</h4>
+          <pre><code>
         const api = {
             fetchData: function () {
                 console.log("Fetching data...");
@@ -221,11 +220,11 @@
         apiProxy.fetchData(); // Logs: Accessing fetchData property, Fetching data...
         </code></pre>
 
-                <h3>3. Behavioral Patterns</h3>
-                <p>These patterns manage object communication and interaction.</p>
+          <h3>3. Behavioral Patterns</h3>
+          <p>These patterns manage object communication and interaction.</p>
 
-                <h4>a. Observer Pattern</h4>
-                <pre><code>
+          <h4>a. Observer Pattern</h4>
+          <pre><code>
         class Subject {
             constructor() {
                 this.observers = [];
@@ -255,8 +254,8 @@
         subject.notify("Event Fired!"); // Outputs: Observer 1: Event Fired!, Observer 2: Event Fired!
         </code></pre>
 
-                <h4>b. Strategy Pattern</h4>
-                <pre><code>
+          <h4>b. Strategy Pattern</h4>
+          <pre><code>
         class PaymentStrategy {
             constructor(strategy) {
                 this.strategy = strategy;
@@ -277,13 +276,13 @@
         payment.execute(200); // Output: Paid 200 using PayPal
         </code></pre>
 
-                <h3>4. Functional Patterns</h3>
-                <p>
-                    These leverage JavaScript's functional programming capabilities.
-                </p>
+          <h3>4. Functional Patterns</h3>
+          <p>
+            These leverage JavaScript's functional programming capabilities.
+          </p>
 
-                <h4>a. Currying</h4>
-                <pre><code>
+          <h4>a. Currying</h4>
+          <pre><code>
         function curry(fn) {
             return function curried(...args) {
                 if (args.length >= fn.length) {
@@ -302,8 +301,8 @@
         console.log(curriedAdd(2)(3)); // Output: 5
         </code></pre>
 
-                <h4>b. Memoization</h4>
-                <pre><code>
+          <h4>b. Memoization</h4>
+          <pre><code>
         function memoize(fn) {
             const cache = {};
             return function (arg) {
@@ -320,70 +319,70 @@
         console.log(factorial(5)); // Output: 120
         </code></pre>
 
-                <h3>Why Use Design Patterns?</h3>
-                <ul>
-                    <li>
-                        <b>Scalability</b>: Patterns make it easier to extend
-                        applications.
-                    </li>
-                    <li>
-                        <b>Readability</b>: Provides standardized, recognizable solutions.
-                    </li>
-                    <li>
-                        <b>Maintainability</b>: Encourages separation of concerns and
-                        modular code.
-                    </li>
-                </ul>
-                <p>
-                    By understanding and applying these patterns effectively, you can
-                    write cleaner, more efficient, and maintainable JavaScript code.
-                </p>
-            </div>
-            <div id="section2">
-                <h2>How JavaScript Code Execution Works</h2>
-                <p>
-                    JavaScript code execution involves two main components: the **Call
-                    Stack** and the **Event Loop**. Here's a step-by-step explanation of
-                    the process:
-                </p>
+          <h3>Why Use Design Patterns?</h3>
+          <ul>
+            <li>
+              <b>Scalability</b>: Patterns make it easier to extend
+              applications.
+            </li>
+            <li>
+              <b>Readability</b>: Provides standardized, recognizable solutions.
+            </li>
+            <li>
+              <b>Maintainability</b>: Encourages separation of concerns and
+              modular code.
+            </li>
+          </ul>
+          <p>
+            By understanding and applying these patterns effectively, you can
+            write cleaner, more efficient, and maintainable JavaScript code.
+          </p>
+        </div>
+        <div id="section2">
+          <h2>How JavaScript Code Execution Works</h2>
+          <p>
+            JavaScript code execution involves two main components: the **Call
+            Stack** and the **Event Loop**. Here's a step-by-step explanation of
+            the process:
+          </p>
 
-                <h3>1. JavaScript Engine</h3>
-                <p>
-                    The JavaScript engine (e.g., V8 for Chrome and Node.js) is
-                    responsible for executing JavaScript code. It consists of two main
-                    parts:
-                </p>
-                <ul>
-                    <li><b>Memory Heap</b>: Stores variables and objects.</li>
-                    <li>
-                        <b>Call Stack</b>: Tracks function calls and execution context.
-                    </li>
-                </ul>
+          <h3>1. JavaScript Engine</h3>
+          <p>
+            The JavaScript engine (e.g., V8 for Chrome and Node.js) is
+            responsible for executing JavaScript code. It consists of two main
+            parts:
+          </p>
+          <ul>
+            <li><b>Memory Heap</b>: Stores variables and objects.</li>
+            <li>
+              <b>Call Stack</b>: Tracks function calls and execution context.
+            </li>
+          </ul>
 
-                <h3>2. Execution Context</h3>
-                <p>
-                    When JavaScript runs, it creates an execution context to manage the
-                    code's execution. The context contains:
-                </p>
-                <ul>
-                    <li>
-                        <b>Global Execution Context</b>: Created for the entire script and
-                        contains global variables and functions.
-                    </li>
-                    <li>
-                        <b>Function Execution Context</b>: Created for each function call
-                        and contains local variables, arguments, and a reference to the
-                        outer environment.
-                    </li>
-                </ul>
+          <h3>2. Execution Context</h3>
+          <p>
+            When JavaScript runs, it creates an execution context to manage the
+            code's execution. The context contains:
+          </p>
+          <ul>
+            <li>
+              <b>Global Execution Context</b>: Created for the entire script and
+              contains global variables and functions.
+            </li>
+            <li>
+              <b>Function Execution Context</b>: Created for each function call
+              and contains local variables, arguments, and a reference to the
+              outer environment.
+            </li>
+          </ul>
 
-                <h3>3. Call Stack</h3>
-                <p>
-                    The call stack is a data structure that tracks function calls. When
-                    a function is called, it is pushed onto the stack. When the function
-                    completes, it is popped off the stack.
-                </p>
-                <pre><code>
+          <h3>3. Call Stack</h3>
+          <p>
+            The call stack is a data structure that tracks function calls. When
+            a function is called, it is pushed onto the stack. When the function
+            completes, it is popped off the stack.
+          </p>
+          <pre><code>
           function greet() {
             console.log("Hello");
           }
@@ -396,27 +395,27 @@
           sayGoodbye(); // Pushed to the call stack after greet
             </code></pre>
 
-                <h3>4. Event Loop</h3>
-                <p>
-                    The event loop ensures that asynchronous tasks (e.g., setTimeout,
-                    Promises, fetch) are executed after the main thread completes.
-                    Here's how it works:
-                </p>
-                <ol>
-                    <li>
-                        JavaScript runs all synchronous code on the main thread (Call
-                        Stack).
-                    </li>
-                    <li>
-                        Asynchronous tasks are moved to the <b>Task Queue</b> or
-                        <b>Microtask Queue</b> for execution after the stack is clear.
-                    </li>
-                    <li>
-                        The <b>Event Loop</b> continuously checks if the call stack is
-                        empty. If it is, it pushes tasks from the queues onto the stack.
-                    </li>
-                </ol>
-                <pre><code>
+          <h3>4. Event Loop</h3>
+          <p>
+            The event loop ensures that asynchronous tasks (e.g., setTimeout,
+            Promises, fetch) are executed after the main thread completes.
+            Here's how it works:
+          </p>
+          <ol>
+            <li>
+              JavaScript runs all synchronous code on the main thread (Call
+              Stack).
+            </li>
+            <li>
+              Asynchronous tasks are moved to the <b>Task Queue</b> or
+              <b>Microtask Queue</b> for execution after the stack is clear.
+            </li>
+            <li>
+              The <b>Event Loop</b> continuously checks if the call stack is
+              empty. If it is, it pushes tasks from the queues onto the stack.
+            </li>
+          </ol>
+          <pre><code>
           console.log("Start");
           
           setTimeout(() => {
@@ -431,19 +430,19 @@
           // Timeout
             </code></pre>
 
-                <h3>5. Microtasks vs. Macrotasks</h3>
-                <p>Tasks are divided into two types:</p>
-                <ul>
-                    <li>
-                        <b>Microtasks</b>: Include Promises and Mutation Observers.
-                        Executed before Macrotasks.
-                    </li>
-                    <li>
-                        <b>Macrotasks</b>: Include setTimeout, setInterval, and DOM
-                        events.
-                    </li>
-                </ul>
-                <pre><code>
+          <h3>5. Microtasks vs. Macrotasks</h3>
+          <p>Tasks are divided into two types:</p>
+          <ul>
+            <li>
+              <b>Microtasks</b>: Include Promises and Mutation Observers.
+              Executed before Macrotasks.
+            </li>
+            <li>
+              <b>Macrotasks</b>: Include setTimeout, setInterval, and DOM
+              events.
+            </li>
+          </ul>
+          <pre><code>
           console.log("Start");
           
           Promise.resolve().then(() => {
@@ -463,41 +462,41 @@
           // Timeout
             </code></pre>
 
-                <h3>Summary</h3>
-                <ul>
-                    <li>
-                        JavaScript executes synchronous code first using the call stack.
-                    </li>
-                    <li>
-                        Asynchronous tasks are handled by the event loop after the stack
-                        is clear.
-                    </li>
-                    <li>Microtasks have higher priority than macrotasks.</li>
-                </ul>
-                <p>
-                    Understanding this flow helps in writing efficient and non-blocking
-                    JavaScript code.
-                </p>
-            </div>
-            <div id="section3">
-                <h2>Understanding the DOM and BOM</h2>
-                <p>
-                    In web development, both the Document Object Model (DOM) and Browser
-                    Object Model (BOM) are crucial concepts for interacting with web
-                    pages and browsers.
-                </p>
+          <h3>Summary</h3>
+          <ul>
+            <li>
+              JavaScript executes synchronous code first using the call stack.
+            </li>
+            <li>
+              Asynchronous tasks are handled by the event loop after the stack
+              is clear.
+            </li>
+            <li>Microtasks have higher priority than macrotasks.</li>
+          </ul>
+          <p>
+            Understanding this flow helps in writing efficient and non-blocking
+            JavaScript code.
+          </p>
+        </div>
+        <div id="section3">
+          <h2>Understanding the DOM and BOM</h2>
+          <p>
+            In web development, both the Document Object Model (DOM) and Browser
+            Object Model (BOM) are crucial concepts for interacting with web
+            pages and browsers.
+          </p>
 
-                <h3>1. What is the DOM?</h3>
-                <p>
-                    The <b>Document Object Model (DOM)</b> is a programming interface
-                    for HTML and XML documents. It represents the structure of a web
-                    page as a tree of objects, allowing developers to manipulate the
-                    content, structure, and styles of the page dynamically using
-                    JavaScript.
-                </p>
+          <h3>1. What is the DOM?</h3>
+          <p>
+            The <b>Document Object Model (DOM)</b> is a programming interface
+            for HTML and XML documents. It represents the structure of a web
+            page as a tree of objects, allowing developers to manipulate the
+            content, structure, and styles of the page dynamically using
+            JavaScript.
+          </p>
 
-                <h4>Example:</h4>
-                <pre><code>
+          <h4>Example:</h4>
+          <pre><code>
                     &lt;!DOCTYPE html&gt;
                     &lt;html&gt;
                     &lt;head&gt;
@@ -509,9 +508,9 @@
                     &lt;/body&gt;
                     &lt;/html&gt;
                       </code></pre>
-                    
-                      <h4>JavaScript Interaction:</h4>
-                      <pre><code>
+
+          <h4>JavaScript Interaction:</h4>
+          <pre><code>
                     &lt;script&gt;
                     document.getElementById('changeText').addEventListener('click', () =&gt; {
                       const title = document.getElementById('title');
@@ -519,8 +518,8 @@
                     });
                     &lt;/script&gt;
                       </code></pre>
-                <h4>JavaScript Interaction:</h4>
-                <pre>
+          <h4>JavaScript Interaction:</h4>
+          <pre>
                 <code>
                 // Change the text of the h1 element
                 document.getElementById('changeText').addEventListener('click', () => {
@@ -529,46 +528,46 @@
                 });
                 </code>
                 </pre>
-                <h4>Features of DOM:</h4>
-                <ul>
-                    <li><b>Dynamic Content:</b> Modify HTML or add new elements.</li>
-                    <li><b>CSS Styling:</b> Change styles dynamically.</li>
-                    <li>
-                        <b>Event Handling:</b> Add interactivity to elements using
-                        JavaScript.
-                    </li>
-                </ul>
+          <h4>Features of DOM:</h4>
+          <ul>
+            <li><b>Dynamic Content:</b> Modify HTML or add new elements.</li>
+            <li><b>CSS Styling:</b> Change styles dynamically.</li>
+            <li>
+              <b>Event Handling:</b> Add interactivity to elements using
+              JavaScript.
+            </li>
+          </ul>
 
-                <h3>2. What is the BOM?</h3>
-                <p>
-                    The <b>Browser Object Model (BOM)</b> is a programming interface
-                    provided by the browser. It allows JavaScript to interact with the
-                    browser outside the scope of the web page, such as manipulating the
-                    browser window, handling navigation, or managing cookies.
-                </p>
+          <h3>2. What is the BOM?</h3>
+          <p>
+            The <b>Browser Object Model (BOM)</b> is a programming interface
+            provided by the browser. It allows JavaScript to interact with the
+            browser outside the scope of the web page, such as manipulating the
+            browser window, handling navigation, or managing cookies.
+          </p>
 
-                <h4>BOM Features:</h4>
-                <ul>
-                    <li>
-                        <b>Window Object:</b> The global object that represents the
-                        browser window. All global variables and functions belong to it.
-                    </li>
-                    <li>
-                        <b>Navigator Object:</b> Provides information about the browser
-                        (e.g., browser name, version).
-                    </li>
-                    <li>
-                        <b>Location Object:</b> Represents the current URL and allows
-                        redirection.
-                    </li>
-                    <li>
-                        <b>History Object:</b> Enables navigation through the browser
-                        history.
-                    </li>
-                </ul>
+          <h4>BOM Features:</h4>
+          <ul>
+            <li>
+              <b>Window Object:</b> The global object that represents the
+              browser window. All global variables and functions belong to it.
+            </li>
+            <li>
+              <b>Navigator Object:</b> Provides information about the browser
+              (e.g., browser name, version).
+            </li>
+            <li>
+              <b>Location Object:</b> Represents the current URL and allows
+              redirection.
+            </li>
+            <li>
+              <b>History Object:</b> Enables navigation through the browser
+              history.
+            </li>
+          </ul>
 
-                <h4>Example:</h4>
-                <pre><code>
+          <h4>Example:</h4>
+          <pre><code>
           <script>
             // BOM Interaction Examples
 
@@ -587,58 +586,65 @@
         </script>
             </code></pre>
 
-                <h3>3. DOM vs. BOM</h3>
-                <table style="border-collapse: collapse; width: 100%; margin-top: 10px">
-                    <thead>
-                        <tr>
-                            <th style="border: 1px solid #ddd; padding: 8px; text-align: left">
-                                Feature
-                            </th>
-                            <th style="border: 1px solid #ddd; padding: 8px; text-align: left">
-                                DOM
-                            </th>
-                            <th style="border: 1px solid #ddd; padding: 8px; text-align: left">
-                                BOM
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="border: 1px solid #ddd; padding: 8px">Definition</td>
-                            <td style="border: 1px solid #ddd; padding: 8px">
-                                Represents the structure of the web page.
-                            </td>
-                            <td style="border: 1px solid #ddd; padding: 8px">
-                                Represents the browser's features and environment.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid #ddd; padding: 8px">Key Object</td>
-                            <td style="border: 1px solid #ddd; padding: 8px">document</td>
-                            <td style="border: 1px solid #ddd; padding: 8px">window</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid #ddd; padding: 8px">Use</td>
-                            <td style="border: 1px solid #ddd; padding: 8px">
-                                Manipulate HTML and CSS.
-                            </td>
-                            <td style="border: 1px solid #ddd; padding: 8px">
-                                Interact with browser (e.g., URL, history, cookies).
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+          <h3>3. DOM vs. BOM</h3>
+          <table
+            style="border-collapse: collapse; width: 100%; margin-top: 10px"
+          >
+            <thead>
+              <tr>
+                <th
+                  style="border: 1px solid #ddd; padding: 8px; text-align: left"
+                >
+                  Feature
+                </th>
+                <th
+                  style="border: 1px solid #ddd; padding: 8px; text-align: left"
+                >
+                  DOM
+                </th>
+                <th
+                  style="border: 1px solid #ddd; padding: 8px; text-align: left"
+                >
+                  BOM
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #ddd; padding: 8px">Definition</td>
+                <td style="border: 1px solid #ddd; padding: 8px">
+                  Represents the structure of the web page.
+                </td>
+                <td style="border: 1px solid #ddd; padding: 8px">
+                  Represents the browser's features and environment.
+                </td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #ddd; padding: 8px">Key Object</td>
+                <td style="border: 1px solid #ddd; padding: 8px">document</td>
+                <td style="border: 1px solid #ddd; padding: 8px">window</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #ddd; padding: 8px">Use</td>
+                <td style="border: 1px solid #ddd; padding: 8px">
+                  Manipulate HTML and CSS.
+                </td>
+                <td style="border: 1px solid #ddd; padding: 8px">
+                  Interact with browser (e.g., URL, history, cookies).
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                <h3>4. Conclusion</h3>
-                <p>
-                    While the <b>DOM</b> focuses on the structure and content of a
-                    webpage, the <b>BOM</b> extends JavaScript's capabilities to
-                    interact with the browser environment. Together, they empower
-                    developers to create interactive and feature-rich web applications.
-                </p>
-            </div>
-        </main>
+          <h3>4. Conclusion</h3>
+          <p>
+            While the <b>DOM</b> focuses on the structure and content of a
+            webpage, the <b>BOM</b> extends JavaScript's capabilities to
+            interact with the browser environment. Together, they empower
+            developers to create interactive and feature-rich web applications.
+          </p>
+        </div>
+      </main>
     </div>
-</body>
-
+  </body>
 </html>
